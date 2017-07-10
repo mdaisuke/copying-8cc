@@ -1,5 +1,8 @@
+	.data
+.mydata:
+	.string "abc"
 	.text
-	.global mymain
-mymain:
-	mov $0, %eax
+	.global stringfn
+stringfn:
+	lea .mydata(%rip), %rax
 	ret
